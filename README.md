@@ -1,7 +1,7 @@
 ```python
 Linux And Terminal = 
 {
-	"Page": "40"
+	"Page": "63"
 	"0 Linux System": 
 
 		"""0 Computer Hardware:
@@ -80,7 +80,7 @@ Linux And Terminal =
 			
 					1* /bin = [GNU user level]
 
-					2* /root = [Boot files]
+					2* /boot = [Boot files]
 
 					3* /dev = [Device nodes]
 
@@ -116,15 +116,114 @@ Linux And Terminal =
 					
 					19 /var = [Change frequently files]
 
-			2 Mont anywhere = [Disk2]
+			2 Mount anywhere = [Disk2]
 
-		4 Symbols = [/ \ . .. _ - --] 
+		4 Symbols = [/, \, ., .., _, -, --, ~, $, ?, *, [], !] 
 
 		5 Commands:
 
-			0 man x = [Show status of every command(x), For exit type "q"]
+			0 Details:
 
-			1 """
+				0 Mixing = [x -asd(Example ls -al)]
+
+				1 Stoping = [Ctrl+C]
+
+			1 Directories:
+
+				0 man x = [Show status of every command(x), For exit type "q"]
+
+				1 cd x = [I want to go in x]
+
+				2 pwd = [Where am i]
+
+				3 ls:
+		
+					0 Means =[What exist in this place]
+
+					1 -a = [Show me hiden too]
+
+					2 -l:
+
+						0 Means = [More information for every directory]
+
+						1 Details:
+
+							0 Permissions
+
+							1 Number of hard links
+
+							2 Owner username
+
+							2 Primary group name
+
+							3 Byte size
+
+							4 Last time modified(Month Day Hour:Min)
+
+							5 Name
+
+					3 -h = [Show me whos continud]
+
+				4 tree = []
+
+				5 stat = []
+
+				6 file = [Type of file]
+
+				7 readlink = []
+
+				8 find
+
+				9 which
+
+			2 pipes:
+	
+				0 | = []
+
+				1 > = []
+
+				2 >> = []
+
+			3 text tools: 
+
+				0 grep = [] 
+
+				1 awk = [] 
+
+				2 sed = [] 
+
+				3 cut = [] 
+
+				4 sort = []
+
+			4 process view: 
+
+				0 ps = [] 
+
+				1 top = [] 
+
+				2 htop = []
+
+
+			5 tracing & inspection: 
+
+				0 strace(light) = [] 
+
+				1 lsof = []
+
+			6 permissions: 
+
+				0 chmod = [] 
+
+				1 chown = []"""
+
+	"Working with bash":
+
+		0 
+
+
+
+
 
 
 
