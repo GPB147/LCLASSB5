@@ -1,7 +1,7 @@
 ```python
 Linux And Terminal = 
 {
-	"Page": "63"
+	"Page": "89"
 	"0 Linux System": 
 
 		"""0 Computer Hardware:
@@ -186,7 +186,7 @@ Linux And Terminal =
 
 			3 text tools: 
 
-				0 grep = [] 
+				0 grep x y(Name of file) = [Sorting data by having x word or number or symbol] 
 
 				1 awk = [] 
 
@@ -194,13 +194,21 @@ Linux And Terminal =
 
 				3 cut = [] 
 
-				4 sort = []
+				4 sort = [Sorting data]
 
 			4 process view: 
 
-				0 ps = [] 
+				0 ps:
 
-				1 top = [] 
+					0 Means = [programs run information] 
+
+					1 Shows = {PID: Process ID, TTY: Terminal, Time: CPU time used, CMD: Model}
+
+				1 top:
+
+					0 Mean = [ps do but workin to press "q"]
+
+					1 Shows = {PID: Process ID , PR: Username of the owner , NI: Nice value of the process , VIRT: Virtual memory used , SHR: Memory using , S: Process status , %CPU: CPU information , %MEM: Physical memory information, TIME: Run&CPU used time, COMMAND: Name}
 
 				2 htop = []
 
@@ -217,9 +225,13 @@ Linux And Terminal =
 
 				1 chown = []"""
 
-	"Working with bash":
+	"4 Doing with Linux + Terminal":
 
-		0 
+		"""0 Finding commands you need in GNU way
+
+		1 Finding detiles in command you need by man 
+
+		2 Automated that by scripting with bash"""
 
 
 
