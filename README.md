@@ -1,7 +1,7 @@
 ```python
 Linux And Terminal = 
 {
-	"Page": "89"
+	"Page": "135"
 	"0 Linux System": 
 
 		"""0 Computer Hardware:
@@ -84,7 +84,13 @@ Linux And Terminal =
 
 					3* /dev = [Device nodes]
 
-					4* /etc = [System configuration files]
+					4* /etc:
+
+						0 What = [System configuration files]
+
+						1 /profile = [Main default startup for the bash shell]
+
+						2 /profile.d = [Statement]
 
 					5 /home = [User]
 
@@ -118,15 +124,25 @@ Linux And Terminal =
 
 			2 Mount anywhere = [Disk2]
 
-		4 Symbols = [/, \, ., .., _, -, --, ~, $, ?, *, [], !] 
+		4 Symbols = [/, \, ., .., _, -, --, ~, $, ?, *, [], !, ;, (), {}, !!, =, ' ',] 
 
 		5 Commands:
 
 			0 Details:
 
-				0 Mixing = [x -asd(Example ls -al)]
+				0 Mixing:
 
-				1 Stoping = [Ctrl+C]
+					0 Way one = [x -asd(Example ls -al)]
+
+					1 Way two = [using ; between commands like pwd;ls;ps, for better priority use () or {} too]
+
+				1 Stoping = [Ctrl+Shift+C]
+
+				2 Command types:
+
+					0 Builtin = [In shell like cd or exit, they more faster than external]
+
+					1 External = [Comes in /bin or /usr/bin or /sbin or /usr/sbin like ps or man]
 
 			1 Directories:
 
@@ -168,13 +184,15 @@ Linux And Terminal =
 
 				5 stat = []
 
-				6 file = [Type of file]
+				6 file:
+
+					0 Mean = [Type of file]
 
 				7 readlink = []
 
 				8 find
 
-				9 which
+				9 which x = [Where is x(Program)]
 
 			2 pipes:
 	
@@ -225,13 +243,37 @@ Linux And Terminal =
 
 				1 chown = []"""
 
+		6 Scripting by bash:
+
+			0 Variables:
+
+				0 Global:
+
+					0 What = [Showen in every places]
+
+					1 How to make = [(Make Local define, export x) / (export x=y / export x="y")]
+
+					2 run and other things = [Like local]
+
+				1 Local:
+
+					0 What = [Shown just in own terminal(Bash/Dash/zsh/...), Numbers and Strings]
+
+					1 How to make = [x=y, x="y", x=y.z, x=/y/z, x=(y z w), x[number]=y]
+			
+					2 How to run = [echo $x, echo ${x[number]}]
+
+					3 How to remove = [unset x, unset x[number]]
+
 	"4 Doing with Linux + Terminal":
 
 		"""0 Finding commands you need in GNU way
 
 		1 Finding detiles in command you need by man 
 
-		2 Automated that by scripting with bash"""
+		2 Finding variables you need
+
+		3 Automated that by scripting with bash"""
 
 
 
