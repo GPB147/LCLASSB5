@@ -1,7 +1,7 @@
 ```python
 Linux And Terminal = 
 {
-	"Page": "135"
+	"Page": "215"
 	"0 Linux System": 
 
 		"""0 Computer Hardware:
@@ -72,7 +72,7 @@ Linux And Terminal =
 
 			0 Core directory:
 
-				0 Means = [First hard drive, Disk1, Mount point, Root, /]
+				0 What = [First hard drive, Disk1, Mount point, Root, /]
 
 				1 Commons:
 
@@ -82,7 +82,15 @@ Linux And Terminal =
 
 					2* /boot = [Boot files]
 
-					3* /dev = [Device nodes]
+					3* /dev:
+
+						0 What = [Device nodes]
+
+						1 /dev/sdx = [SATA and SCSI drivers]
+
+						2 /dev/nvmeNn# = [SDD NVMe drivers]
+
+						3 /dev/hdx = [IDE drivers]
 
 					4* /etc:
 
@@ -91,6 +99,12 @@ Linux And Terminal =
 						1 /profile = [Main default startup for the bash shell]
 
 						2 /profile.d = [Statement]
+
+						3 /etc/apt/sources.list.d/ubuntu.sources = [apt repositories]
+
+						4 /etc/dnf/dnf.conf
+
+						5 /etc/yum.repos.d
 
 					5 /home = [User]
 
@@ -124,7 +138,7 @@ Linux And Terminal =
 
 			2 Mount anywhere = [Disk2]
 
-		4 Symbols = [/, \, ., .., _, -, --, ~, $, ?, *, [], !, ;, (), {}, !!, =, ' ',] 
+		4 Symbols = [/, \, ., .., _, -, --, ~, $, ?, *, [], !, ;, (), {}, !!, =, ' ', #, :] 
 
 		5 Commands:
 
@@ -154,13 +168,13 @@ Linux And Terminal =
 
 				3 ls:
 		
-					0 Means =[What exist in this place]
+					0 What =[What exist in this place]
 
 					1 -a = [Show me hiden too]
 
 					2 -l:
 
-						0 Means = [More information for every directory]
+						0 What = [More information for every directory]
 
 						1 Details:
 
@@ -178,19 +192,17 @@ Linux And Terminal =
 
 							5 Name
 
-					3 -h = [Show me whos continud]
+					3 -h = [Rounding bytes number]
 
 				4 tree = []
 
 				5 stat = []
 
-				6 file:
+				6 file = [Type of file]
 
-					0 Mean = [Type of file]
+				7 readlink x = [Show x link if exist]
 
-				7 readlink = []
-
-				8 find
+				8 find x = [Find x and show to you if exist]
 
 				9 which x = [Where is x(Program)]
 
@@ -218,13 +230,13 @@ Linux And Terminal =
 
 				0 ps:
 
-					0 Means = [programs run information] 
+					0 What = [programs run information] 
 
 					1 Shows = {PID: Process ID, TTY: Terminal, Time: CPU time used, CMD: Model}
 
 				1 top:
 
-					0 Mean = [ps do but workin to press "q"]
+					0 What = [ps do but workin to press "q"]
 
 					1 Shows = {PID: Process ID , PR: Username of the owner , NI: Nice value of the process , VIRT: Virtual memory used , SHR: Memory using , S: Process status , %CPU: CPU information , %MEM: Physical memory information, TIME: Run&CPU used time, COMMAND: Name}
 
@@ -237,13 +249,47 @@ Linux And Terminal =
 
 				1 lsof = []
 
-			6 permissions: 
+				0 chmod:
 
-				0 chmod = [] 
+					0 What = [Changing permissions]
 
-				1 chown = []"""
+					1 How = [chmod x(Number) y(Filename)] 
 
-		6 Scripting by bash:
+					2 Details = [u(User), g(Group), o(Others), a(All)]
+
+					3 Real how = [chmod o+r(Add read in other) y(Filename), chmod o-r y]
+
+				1 chown:
+
+					0 What = [Changing ownership in permissions]
+
+					1 How = [chown x(New UID like gpb147) y(Filename), chown x:z(New GID) y, chown :z y]
+
+		6 Permission:
+
+			0 Means = [Security of User ID(UID)]
+
+			1 Directory:
+
+				0 /etc/passwd(Text) = [Login username, Password(x:), Numerical UID, Numerical group ID(GID), Text description, Location of $Home, Default shell]
+
+				1 /etc/shadow(Hash) = [Login name, Password, Number of day since(Password change), Minimum of days password can change, Number of days befor password must change, Number of days password expiration, Number of days after password expiration befor account disable, Date since disable, Field reversed]	
+	
+				2 /etc/default/useradd
+
+				3 /etc/login/defs
+
+				4 /etc/skel
+
+				5 /etc/group = [Group name, password, GID, List of user accounts]
+
+			2 Linux file permission = [-, Owner[r(Read), w(Write), x(Execute)], Group[r(Read), w(Write), -], Others[r(Read), -(Write), -(Execute)]]
+
+			3 Changing permissions = [chmod]
+
+			4 Cahngin ownership = [chown]
+
+		7 Scripting by bash:
 
 			0 Variables:
 
@@ -265,15 +311,67 @@ Linux And Terminal =
 
 					3 How to remove = [unset x, unset x[number]]
 
+			1 vim editor:
+
+				0 Dir = [/usr/bin/vim]
+
+				1 Run = [Type vim, Type vim x(File name)]
+
+				2 Modes: 
+				
+					0 Command:
+
+						0 What = [At first by default]
+
+						1 Commands:
+
+							0 Highlighte = [press v]
+
+							1 Delete = [press x]
+
+							2 Copy and paste = [y foy coping and p for pasting]
+
+							3 Searching = [press /]
+
+					1 Insert:
+
+						0 What = [Writing(Letters, Numbers, Symboles)]
+
+						1 How to run = [Type i]
+
+						2 How to quit and back to command = [Press esc]
+
+					2 Ex:
+
+						0 What = [Control actions]
+
+						1 How to run = [press : in command mode]
+
+						2 Command:
+
+							0 q = [quit if haven't any changes]
+
+							1 q! = [quit and discard changes]
+
+							2 w x = [saves by x name]
+
+							3 wq = [default save and quit]
+
+			2 Bash:
+
+				0 #!/bin/bash = [First line for make file format bash]"""
+
 	"4 Doing with Linux + Terminal":
 
-		"""0 Finding commands you need in GNU way
+		"""0 Finding libraries(Softwares) you need and install them by sudo apt install x and for upgrade all use sudo apt upgrade
 
-		1 Finding detiles in command you need by man 
+		1 Finding commands you need in GNU way
 
-		2 Finding variables you need
+		2 Finding detiles in command you need by man 
 
-		3 Automated that by scripting with bash"""
+		3 Finding variables you need
+
+		4 Automated that(Commands) in single step by scripting with Shell(Bash) in a editor"""
 
 
 
