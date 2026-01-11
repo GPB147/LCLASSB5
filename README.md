@@ -1,7 +1,7 @@
 ```python
 Linux And Terminal = 
 {
-	"Page": "263"
+	"Page": "267"
 	"0 Linux System": 
 
 		"""0 Computer Hardware:
@@ -138,7 +138,7 @@ Linux And Terminal =
 
 			2 Mount anywhere = [Disk2]
 
-		4 Symbols = [/, \, ., .., _, -, --, ~, $, ?, *, [], !, ;, (), {}, !!, =, ' ', #, :] 
+		4 Symbols = [/, \, ., .., _, -, --, ~, $, ?, *, [], !, ;, (), {}, !!, =, !=, ' ', #, :] 
 
 		5 Commands:
 
@@ -376,7 +376,7 @@ Linux And Terminal =
 
 					2 | = [Continue command]
 
-					2 / = [Show exact this in string like "asdfw fadsf /$HELLO" and show $HELLO]
+					2 \ = [Show exact this in string like "asdfw fadsf /$HELLO" and show $HELLO]
 
 				5 Priority = [Up to down, Left to right]
 
@@ -395,6 +395,8 @@ Linux And Terminal =
 					1 if-then-else = [else come after then and means another way]
 
 					2 elif = [else if, come after then and need a then after itselt, Priority exist in this]
+
+					3 echo and test = [echo for giving and test for doing, test = [], [ x =!=<><<>>... y ], [x \<>... y]
 
 					2 fi = [if-then ending]"""
 
