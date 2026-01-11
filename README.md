@@ -1,7 +1,7 @@
 ```python
 Linux And Terminal = 
 {
-	"Page": "236"
+	"Page": "259"
 	"0 Linux System": 
 
 		"""0 Computer Hardware:
@@ -208,15 +208,17 @@ Linux And Terminal =
 
 			2 pipes:
 	
-				0 | = []
+				0 x | y = [x=Command1 and y=Command2, y actually continue x]
 
-				1 > = []
+				1 x > y = [x=Command and y=OutputFileName]
 
-				2 >> = []
+				2 x >> y = [Append data(x command) in allready exist file(y outputfilename)]
+
+				3 Summary = [x | y | z | w > res0 OR x | y | z | w >> res0]
 
 			3 text tools: 
 
-				0 grep x y(Name of file) = [Sorting data by having x word or number or symbol] 
+				0 grep x y(Name of file), grep x y/z/w = [Finding data by having x word or number or symbol] 
 
 				1 awk = [] 
 
@@ -370,7 +372,9 @@ Linux And Terminal =
 				4 Symboles:
 					0 ; = [like enter or \n]
 
-					1 : = [Continue in this line with other command]
+					1 : = [Continue line]
+
+					2 | = [Continue command]
 
 					2 / = [Show exact this in string like "asdfw fadsf /$HELLO" and show $HELLO]
 
@@ -378,21 +382,31 @@ Linux And Terminal =
 
 				6 command going to a variable:
 
-					0 x=$(y) = [Return y command]
+					0 x=$(y), x=$(y + x), x=$[y / z] = [Return y command, Return result, In [] everything about math]
 
-					1 x="y" = [Return just y and not y command]"""
+					1 x="y" = [Return just y and not y command]
+
+				7 exit = [In last of script for found respond(0-255)]
+
+				8 Statement:
+
+					0 if-then = [if x;then;        y;fi, if work just if respond of this command be 0]
+
+					1 fi = [if-then ending]"""
 
 	"4 Doing with Linux + Terminal":
 
-		"""0 Finding libraries(Softwares) you need and install them by sudo apt install x and for upgrade all use sudo apt upgrade
+		"""0 Finding shell type(bash/zsh/...) + editor you need
 
-		1 Finding commands you need in GNU way
+		1 Finding libraries(Softwares) you need and install them by sudo apt install x and for upgrade all use sudo apt upgrade
 
-		2 Finding detiles in command you need by man 
+		2 Finding commands you need in GNU way
 
-		3 Finding variables you need
+		3 Finding detiles in command you need by man 
 
-		4 Automated that(Commands) in single step by scripting with Shell(Bash) in a editor"""
+		4 Finding variables you need
+
+		5 Automated that(Commands) in single step by scripting with Shell in a editor"""
 
 
 
