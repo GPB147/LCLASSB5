@@ -1,7 +1,7 @@
 ```python
 Linux And Terminal = 
 {
-	"Page": "259"
+	"Page": "263"
 	"0 Linux System": 
 
 		"""0 Computer Hardware:
@@ -392,7 +392,11 @@ Linux And Terminal =
 
 					0 if-then = [if x;then;        y;fi, if work just if respond of this command be 0]
 
-					1 fi = [if-then ending]"""
+					1 if-then-else = [else come after then and means another way]
+
+					2 elif = [else if, come after then and need a then after itselt, Priority exist in this]
+
+					2 fi = [if-then ending]"""
 
 	"4 Doing with Linux + Terminal":
 
