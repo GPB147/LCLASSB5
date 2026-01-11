@@ -1,7 +1,7 @@
 ```python
 Linux And Terminal = 
 {
-	"Page": "215"
+	"Page": "236"
 	"0 Linux System": 
 
 		"""0 Computer Hardware:
@@ -305,7 +305,7 @@ Linux And Terminal =
 
 					0 What = [Shown just in own terminal(Bash/Dash/zsh/...), Numbers and Strings]
 
-					1 How to make = [x=y, x="y", x=y.z, x=/y/z, x=(y z w), x[number]=y]
+					1 How to make = [x=y, x="y", x=y.z, x=/y/z, x=(y z w), x[number]=y, PATH=$PATH:/x/y/z]
 			
 					2 How to run = [echo $x, echo ${x[number]}]
 
@@ -359,7 +359,28 @@ Linux And Terminal =
 
 			2 Bash:
 
-				0 #!/bin/bash = [First line for make file format bash]"""
+				0 #!/bin/bash = [First line for make file format bash]
+
+				1 chmod u+x y =[make permission for y file execute]
+
+				2 Run script(File) = [Type ./x/y/z(File address)]
+
+				3 Make and use variables = [by $ in strings after defining]
+
+				4 Symboles:
+					0 ; = [like enter or \n]
+
+					1 : = [Continue in this line with other command]
+
+					2 / = [Show exact this in string like "asdfw fadsf /$HELLO" and show $HELLO]
+
+				5 Priority = [Up to down, Left to right]
+
+				6 command going to a variable:
+
+					0 x=$(y) = [Return y command]
+
+					1 x="y" = [Return just y and not y command]"""
 
 	"4 Doing with Linux + Terminal":
 
