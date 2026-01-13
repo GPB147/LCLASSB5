@@ -1,7 +1,7 @@
 ```python
 Linux And Terminal = 
 {
-	"Page": "267"
+	"Page": "304"
 	"0 Linux System": 
 
 		"""0 Computer Hardware:
@@ -378,6 +378,16 @@ Linux And Terminal =
 
 					2 \ = [Show exact this in string like "asdfw fadsf /$HELLO" and show $HELLO]
 
+					3 && = [and]
+
+					4 || = [or] 
+
+					5 [] = [Test, Doing]
+
+					6 () = [For more than one word like if (echo x), Don't need this actually]
+
+					7 (()) = [Use for expression usually]
+
 				5 Priority = [Up to down, Left to right]
 
 				6 command going to a variable:
@@ -390,7 +400,7 @@ Linux And Terminal =
 
 				8 Statement:
 
-					0 if-then = [if x;then;        y;fi, if work just if respond of this command be 0]
+					0 if-then = [if command;then;        y;fi, if work just if respond of this command be 0]
 
 					1 if-then-else = [else come after then and means another way]
 
@@ -398,7 +408,29 @@ Linux And Terminal =
 
 					3 echo and test = [echo for giving and test for doing, test = [], [ x =!=<><<>>... y ], [x \<>... y]
 
-					2 fi = [if-then ending]"""
+					4 Boolean:
+
+						0 [ x ] || [ y ] = [x or y]
+
+						1 [ x ] && [ y ] = [x and y]
+
+					5 fi = [if-then ending]
+
+				9 Iteratings:
+
+					0 For:
+
+						0 What = [for variable in list;do;        command;done, exactly like python for]
+
+						1 "" = [Show words as a one word in list] 
+
+						2 C language style = [for ((this is ; if this is ; do this))]
+
+					1 While:
+
+						0 What = [while test command;do;	other command;done]
+
+					2 until"""
 
 	"4 Doing with Linux + Terminal":
 
@@ -412,7 +444,7 @@ Linux And Terminal =
 
 		4 Finding variables you need
 
-		5 Automated that(Commands) in single step by scripting with Shell in a editor"""
+		5 Automated that(Commands with details + Variables) in single step by scripting with Shell in a editor"""
 
 
 
