@@ -1,7 +1,7 @@
 ```python
 Linux And Terminal = 
 {
-	"Page": "304"
+	"Page": "320"
 	"0 Linux System": 
 
 		"""0 Computer Hardware:
@@ -406,15 +406,27 @@ Linux And Terminal =
 
 					2 elif = [else if, come after then and need a then after itselt, Priority exist in this]
 
-					3 echo and test = [echo for giving and test for doing, test = [], [ x =!=<><<>>... y ], [x \<>... y]
+					3 echo = [echo for giving]
 
-					4 Boolean:
+					4 test:
+
+						0 What = [test for doing, test = [], [ x =!=<><<>>... y ], [x \<>... y]]
+
+						1 Math:
+
+							0 -lt = [Smaller]
+
+							1 -eq = [Equal]
+
+							2 -gt, -ge = [Bigger]
+
+					5 Boolean:
 
 						0 [ x ] || [ y ] = [x or y]
 
 						1 [ x ] && [ y ] = [x and y]
 
-					5 fi = [if-then ending]
+					6 fi = [if-then ending]
 
 				9 Iteratings:
 
@@ -424,13 +436,39 @@ Linux And Terminal =
 
 						1 "" = [Show words as a one word in list] 
 
-						2 C language style = [for ((this is ; if this is ; do this))]
+						2 C language style = [for ((this is ; while ; do this))]
 
 					1 While:
 
 						0 What = [while test command;do;	other command;done]
 
-					2 until"""
+						Boolean = [Start in true to get false]
+
+					2 until:
+
+						0 What = [until test command;do;	other commant;done]
+
+						1 How work = [Start in false to get true]
+
+					3 break:
+
+						0 break 1 = [Breaking just current iteration loop(By default)]
+
+						1 break 2 = [Breaking all iterations loops]
+
+					4 continue:
+
+						0 continue 1 = [Continue just current iteration loop(By default)]
+
+						1 continue 2 = [Continue all iterations loops]
+
+				10 Pipes:
+
+					0 What = [done | Command | Next Command | ... >Or>> Output.Type, Example=done | sort > new.txt]
+
+				11 Command line parameters:
+
+					0 What = [$0-$9(Usually $1-$9), in run thie file by ./filename.type x t z ... we can chose $0 to $9 by priority, Example=echo Hello $1;> x.txt; ./x.txt worls]"""
 
 	"4 Doing with Linux + Terminal":
 
