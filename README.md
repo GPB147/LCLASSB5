@@ -1,7 +1,7 @@
 ```python
 Linux And Terminal = 
 {
-	"Page": "320"
+	"Page": "452"
 	"0 Linux System": 
 
 		"""0 Computer Hardware:
@@ -92,6 +92,8 @@ Linux And Terminal =
 
 						3 /dev/hdx = [IDE drivers]
 
+						4 /dev/null = [Sending eorrors without saving them]
+
 					4* /etc:
 
 						0 What = [System configuration files]
@@ -134,7 +136,13 @@ Linux And Terminal =
 
 					18 /usr = [Secondary directory hierarchy]
 					
-					19 /var = [Change frequently files]
+					19 /var: 
+
+						0 What = [Change frequently files]
+	
+						1 /var/spool/at or var/spool/cron/atjobs = [Automaticly run program in a specific time]
+
+						2 /var/spool/anacron = [Automaticly run program in a specific time]
 
 			2 Mount anywhere = [Disk2]
 
@@ -194,9 +202,9 @@ Linux And Terminal =
 
 					3 -h = [Rounding bytes number]
 
-				4 tree = []
+				4 tree = [Show everythin exist of current location to the end in tree way and show how many file and directories exist]
 
-				5 stat = []
+				5 stat x = [Show status of x]
 
 				6 file = [Type of file]
 
@@ -222,7 +230,25 @@ Linux And Terminal =
 
 				1 awk = [] 
 
-				2 sed = [] 
+				2 sed:
+
+					0 What = [manipulating data of a file, sed not modifying files] 
+
+					1 How to use:
+
+						0 Basic = [sed options command filename]
+
+						1 Options:
+
+							0 -e command other command filename ... = [Use fore more than one command, Example=sed -e "s/dog/cat/; s/hello/fuck you/" 43.txt]
+
+							1 -f sedfilename filename = [Use for reading a file, Example=sed -f script1.sed 53.sh]
+
+							2 -n
+
+						2 Commands:
+
+							0 s/x/y/ = [Switching x already exist in file to y]
 
 				3 cut = [] 
 
@@ -235,6 +261,12 @@ Linux And Terminal =
 					0 What = [programs run information] 
 
 					1 Shows = {PID: Process ID, TTY: Terminal, Time: CPU time used, CMD: Model}
+
+					2 -e = [Everything even thing run in my background]
+
+					3 -o = [Options, Example=ps -o pid ni cmd]
+				
+					4 -p = [Process ID(PID), Example=ps -p 32462]
 
 				1 top:
 
@@ -249,7 +281,29 @@ Linux And Terminal =
 
 				0 strace(light) = [] 
 
-				1 lsof = []
+				1 lsof:
+
+					0 What = [Listed all open file descriptors on the entire Linux system]
+
+					1 -p = [Process ID(PID)]
+
+					2 -d = [File descriptor(FD) numbers to display, r w x]
+
+					3 -a = [Result of options]
+
+					4 -u = [user(USER)]
+
+					5 ? = [Type(TYPE), CHR(Character) BLK(Bloock) DIR(Directory) REG(Regular file)]
+
+					6 ? = [Device number(DEVICE)]
+
+					7 ? = [The available size of the file(SIZE)]
+
+					8 ? = [The node number of the local file(NODE)]
+
+					9 ? = [The name of the file(NAME)]
+
+					10 How to use = [Example= lsof -a -p $$ -d 0,1,2   ,   $$ actually defined to Process ID(PID)]	
 
 				0 chmod:
 
@@ -388,6 +442,12 @@ Linux And Terminal =
 
 					7 (()) = [Use for expression usually]
 
+					8 # = [Seprating]
+
+					9 -- = [Spaces(Empty) in run files, Exmaple=./52.sh 234 wer -- 234 -s ]
+
+					10 $# = [Determing number of parameters, In ./23.sh 3 d 55 fsg 23 acutally $# is 5]
+
 				5 Priority = [Up to down, Left to right]
 
 				6 command going to a variable:
@@ -406,7 +466,11 @@ Linux And Terminal =
 
 					2 elif = [else if, come after then and need a then after itselt, Priority exist in this]
 
-					3 echo = [echo for giving]
+					3 echo:
+
+						0 What = [echo for giving]
+
+						1 -n = [Continue in this line, Example=echo -n "enter the name: "]
 
 					4 test:
 
@@ -419,6 +483,12 @@ Linux And Terminal =
 							1 -eq = [Equal]
 
 							2 -gt, -ge = [Bigger]
+
+							3 -n = [Number and string]
+
+							4 -ne = [Not be(Against -eq)]
+
+							5 -le = [Smaller]
 
 					5 Boolean:
 
@@ -466,9 +536,174 @@ Linux And Terminal =
 
 					0 What = [done | Command | Next Command | ... >Or>> Output.Type, Example=done | sort > new.txt]
 
-				11 Command line parameters:
+				11 Command line parameters(Input):
 
-					0 What = [$0-$9(Usually $1-$9), in run thie file by ./filename.type x t z ... we can chose $0 to $9 by priority, Example=echo Hello $1;> x.txt; ./x.txt worls]"""
+					0 What = [$0-$9(Usually $1-$9), in run thie file by ./filename.type x t z ... we can chose $0 to $9 by priority, Example=echo Hello $1;> x.txt; ./x.txt worls, ./x.txt "bad world"]
+
+					1 More than $9 = [${10}, ${11}, ${...}]
+
+					2 $0 = [Specially for shell script type like bash or zsh or ...]
+
+					3 $# 
+
+						0 What = [Input counter, Nothing input=0 and something(Word, Number, Symbol) input=1 and two input=2 and ...]
+
+						1 ${$#} = [Last number of input in all system(Not just in this script)]
+
+						2 ${!#} = [Return last input]
+
+					4 $* = [Return all of the inputs(Word, String, Symbols)]
+
+					5 $@ = [Return all of the inputs(Word, String, Symbols)]
+
+					6 shift number = [Ignore inputes of left by number, Example=shift 2]
+
+					7 read value:
+
+						0 What = [When type read x then must imput something and define this to x, No x means by default value is $REPLY]
+
+						1 -p = [Pring, Example=read p "Enter the name: " name]
+
+						2 -t = [Time second wait and close automaticly after than]
+
+						3 -n number = [Number of charackters]
+
+						4 -s = [Hide this by saming coloring in background]
+
+						5 cat x | while read y = [Input(y)=Every line of x file]
+
+				12 Options(OOP)
+
+					0 case = [case -x) command y;other command z;...;;;esac; ./53.sh -x]
+
+					1 getopt/getopts"""
+
+				13 Output:
+
+					0 STDIN:
+
+						0 < <<
+
+						1 cat = [Just type cat and you cat write and in last save that by >]
+
+					1 STDOUT:
+
+						0 > >> =0 What = [Errors not send in]
+
+						1 tee filename:
+
+							0 -a = [Append]
+
+					2 STDERR:
+
+						1 1> = [Just send non erors, By default, Example=ls 1> 0.txt]
+
+						2 2> = [Just send errors]
+
+						3 &> = [send non errors and erors]
+
+					3 exec number> filename = [Sent line number of result of command in filename, Example=exec 3> 43.txt]
+
+				14 Controling script:
+
+					0 Signals(Job control):		
+				
+						0 SIGHUP = [1, Hangs up the process]
+
+						1 SIGINT = [2, Interrupts the process, Ctrl+C]
+
+						2 SIGQUIT = [3, Stops the process, EXIT]
+
+						3 SIQKILL = [9, Unconditionally terminates the process, kill -9 PPID(In ps)]
+
+						4 SIGTERM = [15, Terminates the process if possible]
+	
+						5 SIGCONT = [18, Continues a stopped process]
+
+						6 SIGSTOP = [19, Unconditionally stops but doesn’t terminate the process]
+
+						7 SIGTSTP = [20, Stops or pauses the process but doesn’t terminate it, Ctrl+Z]
+
+					1 sleep number = [Active signal in number seconds] 
+
+					2 trap command signals = [Active Signals in scripts, Example=trap "Hello, World" SIGINT]
+
+					3 ./34.sh & = [& in running a file give us job number and Process ID(PID) like [1] 1234 and run this file in system(ps)]
+
+					4 npup command = [Block SIGHUP, Example=nohub ./23.sh &]
+
+					5 jobs = [Show us active jobs]
+
+					6 nice:
+
+						0 What = [Priority of programs for CPU, Lower number of priority means higher priority(1-20)]
+
+						1 -n = [New priority level, Example=nuce -n 10 34.sh > 34.out &]
+
+					7 renice = [Change priority of programs for CPU already running, Example=renice -n 11 -p 3225]
+
+					8 Running programs in a specific times:
+
+						0 at [-f filename] time, atd = [atd check directories every 60 seconds, Example= at -f 53.sh now or at -m -f 53.sh tomorrow]
+
+						1 corn = [minutepasthour hourofday dayofmonth month dayofweek command, at doing but in a routine loop, Example=00 12 28-31 * * if [ "$(date +%d -d tomorrow)" = 01 ] ; then command ; fi]
+
+						2 anacorn = [period delay identifier command, Guaranteed running]
+
+						3 atq = [Show at's]
+
+						4 atrm number = [Remove at's]
+
+				15 Functions:
+
+					0 What = [Defining commands to a name]
+
+					1 Making:
+
+						0 function name { commands }
+
+						1 name() { commands }
+
+					2 Running = [Just type functiong name, we can adding inputs($1 $2 ...) and type name of function input1 input2 input...]
+
+					3 Result:
+
+						0 $? = [Give us return, Example=echo "Exis status now is $?", $? must be less than 256 inteher]
+
+						1 return $[]= [Defined a specific exit status]
+
+					4 Exist functions:
+
+						0 What = [Functions already exist and defind in system like fractorial]
+
+						1 How to use = [Make and complete this function and type that with variable, Example=res=$(factorial var1)]
+
+						
+
+				16 Variables:
+
+					0 Global = [By default, Variable=$[], Variable=x]
+
+					1 Local  = [Just define in own script or function, local variable=$[], local variable=x]
+
+				17 Arrays = [(), Example=arr=(0 1 2 3 4)]
+
+				18 Libraris:
+
+					0 source:
+
+						0 What = [Run a library in a shell script]
+
+						1 How to use = [. x, Example=. ./myfuncs or . /etc/bashrc] 
+
+					1 How to use = [function name { commands };library command]
+
+					2 Saving our functions as a library = [save this in .bashrc file in home directory]
+
+				
+
+					
+					
 
 	"4 Doing with Linux + Terminal":
 
@@ -482,9 +717,11 @@ Linux And Terminal =
 
 		4 Finding variables you need
 
-		5 Automated that(Commands with details + Variables) in single step by scripting with Shell in a editor"""
+		5 Finding functions you need
 
+		6 Automated that in single step by scripting with Shell in a editor
 
+		7 Make it graphical"""
 
 
 

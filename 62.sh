@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "Hello, $1"
+ls &> -3.txt
 exit
