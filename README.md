@@ -1,7 +1,6 @@
 ```python
 Linux And Terminal = 
 {
-	"Page": "452"
 	"0 Linux System": 
 
 		"""0 Computer Hardware:
@@ -228,7 +227,43 @@ Linux And Terminal =
 
 				0 grep x y(Name of file), grep x y/z/w = [Finding data by having x word or number or symbol] 
 
-				1 awk = [] 
+				1 awk=gawk
+
+					0 What = [Using that for reporting] 
+
+					1 How to use:
+
+						0 Basic = [gawk options program file]
+
+						1 Options:
+
+							0 -F fs = [-F x actually says until x, Example= gawk -F: '{print $1}' /etc/passwd This is means give us fist charackter of every line of /etc/passwd until see :]
+
+							1 -f gawkfilename = [All commands in a file and we called by -f, Example=gawk -F: -f 32.gawk /etc/passwd]
+
+							2 -v var=value
+
+							3 -L [keyword]
+
+						2 Commands:
+
+							0 '{print "x"}' = [Return me x, Example=gawk '{print "Hello, World!"}']
+
+							1 '{$n="x"}'
+
+							2 '{x="y"}'
+
+							3 'BEGIN {x}' = [BEGIN command force that to gawk work, Example=gawk 'BEGIN {pring "Hello, World!"}']
+
+							4 END = [Ending the script, Example=]
+
+						3 End Of File(EOF) = Ctrl+C
+
+						4 Charakters of lines = [$0(All charackter of line), $1, $2, $n, Example=gawk '{print $1} 43.txt means give us first charackter of every lines of 43.txt]
+
+						5 Some commands = [Using ;, Example=gawk '{$4="gpb147"; print $0}']
+
+						6 Tabs = [Spaces or \t]
 
 				2 sed:
 
@@ -236,19 +271,105 @@ Linux And Terminal =
 
 					1 How to use:
 
-						0 Basic = [sed options command filename]
+						0 Basic = [sed options script filename]
 
 						1 Options:
 
-							0 -e command other command filename ... = [Use fore more than one command, Example=sed -e "s/dog/cat/; s/hello/fuck you/" 43.txt]
+							0 -e command other command ... = [Use fore more than one command, Example=sed -e "s/dog/cat/; s/hello/fuck you/" 43.txt]
 
-							1 -f sedfilename filename = [Use for reading a file, Example=sed -f script1.sed 53.sh]
+							1 -f sedfilename = [A file with commands and just call that faile, Example=sed -f 52.sed 53.sh]
 
-							2 -n
+							2 -n = [Give us only thing we want and nothing else, Example=sed -n '/Hello/{ p; s/Hello/Fuck You/p }' 34.txt]
 
 						2 Commands:
 
-							0 s/x/y/ = [Switching x already exist in file to y]
+							0 s/x/y/
+
+								0 What = [Switching x already exist in file to y]
+
+								1 s/x/y/z:
+
+									0 What = [If we have some x in the file so neede chose this]
+
+									1 z=number = [Chosing by number]
+
+									2 z=g = [Chosing all]
+
+									3 z=p
+
+									4 z=w
+
+								2 s!/x/y!/z/q! = [Some switching in one command]
+
+							1 d:
+
+								0 What = [Deleting, Example=sed 'd' 43.txt]
+
+								1 Numberd = [Deleting a line by number, Example=sed '3d' 43.txt]
+
+								2 Number,Numberd = [Deleting a range of lines, Example=sed '2,5d' 43.txt]
+
+								3 Number,$d = [Deleting all lines after a number, Example=sed '2,$d' 43.txt]
+
+								4 /Text/d = [Deleting a line by text this line have, Example=sed '/Hello/d' 43.txt]
+
+								5 /Text/,/Text/d = [Deleting a range of lines by range text they have, Example=sed '/1/,/5/d' 43.txt]
+
+							2 Adding:
+
+								0 What = [Add a word or number or symbol to a file]
+	
+								1 a = [Adding without changin priority, Example=sed 'a\Hello, World!']
+
+								2 i = [Adding with changing priority, Example=sed 'a\Hello, World!']
+
+								3 Changing priority:
+
+									0 Numberi\x = [Example=sed '3i\This is a good line to be here 62.txt]
+
+							3 Replacing:
+
+								0 c = [Replacing a new in old line, Example=sed '2c\This is a new line in second line' 84.txt]
+
+								1 /Text/c\x = [Example=sed '/Hello/c\going to replace this line' 25.txt]
+
+								2 Number,Numberc\x
+
+							4 y/x/y/ = [Switching every charackter of x already exist in file to every charackter of y by priority, Example=sad 'y/123/678/' 34.txt]
+
+							5 p = [Printing, Example=sed -n '/Hello/p' 43.txt]
+
+							6 = = [Printing + Numbering every line by priority, Example=sed '=' 34.txt]
+
+							7 l = [Printing + Fixing, Example=sed 'l' 34.txt]
+
+							8 w filename = [Witing in x, Example=sed '1,5w 35.txt' 34.txt]
+
+							9 r filename = [Reading x, Example=sed '3r 22.txt' 23.txt]
+
+						3 {address} command, address { commands }:
+
+							0 What = [Commands for specific address]
+
+							1 Numberic:
+
+								0 One line = [Example=sed '2/world/people/' 42.txt]
+
+								1 Some lines = [Example=sed '2,3,s/world/people/' 42.txt]
+
+								2 All lines after that = [Example=sed '2,$s/world/people/' 42.txt]
+
+								3 Some commands:
+
+									0 Number{ Commands }
+
+									1 Number,${ Commands }
+
+							2 Text pattern:
+	
+								0 /pattern/command
+
+									0 What = [Example= sed '/gpb147/s/bin/Fuck You At all/' /etc/passwd]
 
 				3 cut = [] 
 
@@ -700,10 +821,39 @@ Linux And Terminal =
 
 					2 Saving our functions as a library = [save this in .bashrc file in home directory]
 
-				
+			19 Expressions:
 
-					
-					
+				0 What = [Logarithms]
+
+				1 Syboles:
+
+					0 General:
+
+						0 \x = [Show just x, Example=sed '/\\/p' 4.txt]
+
+						1 ^x = [Show closest to x]
+
+						2 $ 
+
+						3 . = [Everything like *]
+
+						4 [xy...] = [Focused on x or y or ... as a one charackter, Example=sed -n '/[Yy]es/p' 31.txt]
+
+						5 [Number or word-Number or word] = [Range of numbers]
+
+						6 [[:x:]] = [Basic Regular Expression(BRE), Return us x type, Example=sed '[[:digit:]]' 35.txt]
+
+						7 * = [Everything]
+
+					1 gawk:		
+
+						0 ? = [Everything]
+
+						1 x+y = [xy or closest thing like xy but have more number or word or symbol]
+
+						2 x{Number}y = [Like + but have line by number, Need --re--interval in befor]
+
+						3 | = [Or]		
 
 	"4 Doing with Linux + Terminal":
 
@@ -721,7 +871,11 @@ Linux And Terminal =
 
 		6 Automated that in single step by scripting with Shell in a editor
 
-		7 Make it graphical"""
+		7 Make it graphical
+
+		8 Testing withou changin file by sed
+
+		9 Reporting by gawk"""
 
 
 
