@@ -697,7 +697,7 @@ Linux And Terminal =
 
 					0 case = [case -x) command y;other command z;...;;;esac; ./53.sh -x]
 
-					1 getopt/getopts"""
+					1 getopt/getopts
 
 				13 Output:
 
@@ -853,7 +853,7 @@ Linux And Terminal =
 
 						2 x{Number}y = [Like + but have line by number, Need --re--interval in befor]
 
-						3 | = [Or]		
+						3 | = [Or]"""	
 
 	"4 Doing with Linux + Terminal":
 
@@ -876,14 +876,5 @@ Linux And Terminal =
 		8 Testing withou changin file by sed
 
 		9 Reporting by gawk"""
-
-
-
-
-
-
-
-
-
 }
 ```
