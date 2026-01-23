@@ -1,12 +1,14 @@
 #!/bin/bash
-for vib in /home/gpb147/Repo/*
+addr="/home/gpb147/Repo/0.sh"
+for vib in $addr
 do
-        if [ -d "$vib" ]
-        then
-                echo "$vib is a directory"
-        elif [ -f "$vib" ]
-        then
-                echo "$vib is a file"
-        fi
+	if [ -d "$vib" ]
+	then
+		echo "$vib is a directory"
+	elif [ -f "$vib" ] 
+	then
+		echo "$vib is a file"
+	fi
 done
 exit
+

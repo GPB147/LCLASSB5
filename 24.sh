@@ -1,9 +1,7 @@
 #!/bin/bash
-for Vibration in Mohammad gpb147 Hacker
+for vibration in Mohammad Hacker gpb147
 do
-        echo "We are fine $Vibration"
+	echo "I want your grow $vibration"
 done
-echo "I am $Vibration"
-Vibration=gpb147
-echo "I am $Vibration now"
 exit
+

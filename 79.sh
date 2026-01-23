@@ -1,4 +1,5 @@
 #!/bin/bash
 
-gawk 'BEGIN {print "Hello, World"}'
+gawk '{print "Fuck You"}'
 exit
+

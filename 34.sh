@@ -1,9 +1,9 @@
 #!/bin/bash
-num=13
-while echo "$num is"
-        [ $num -gt 0 ]
+num=0
+while [ $num -gt -15 ]
 do
-        echo "OK $num"
-        num=$[ $num - 1 ]
+	echo "Number is $num now"
+	num=$[ $num - 1 ]
 done
 exit
+

@@ -1,8 +1,18 @@
 #!/bin/bash
-if (echo "Hello")
+Mohammad=25
+Job=2
+if [ $Mohammad ] || [ $SASD ]
 then
-        echo "OK"
+	echo "OK"
+	if [ $Job ] && [ $Soghra ] 
+	then
+		echo "OK2"
+	else
+		echo "Not OK2"
+	fi
+	exit
 else
-        echo "Not OK"
+	echo "Not OK"
 fi
 exit
+

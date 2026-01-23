@@ -1,20 +1,19 @@
 #!/bin/bash
-Mohammad=25
-Job=2
-Home=/home/gpb147/
+Home=/home/gpb147
 Home2=gpb147
-if [ $Mohammad \> $Job ] 
+if [ $Home != gpb147 ]
 then
-        echo "OK"
-        pwd
-        if [ $Home = /home/gpb147/ ]
-        then
-                cd $Home
-                pwd
-                echo "Very Good"
-        else
-                echo "Doing again"
-        fi
-        exit
+	echo "OK"
+	pwd
+	cd $Home
+	pwd
+elif [ $Home != $Home2 ]
+then
+	echo "OoK"
+	cd $Home
+	pwd
+else
+	echo "Zero"
 fi
 exit
+

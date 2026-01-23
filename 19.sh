@@ -1,17 +1,21 @@
 #!/bin/bash
 Mohammad=25
 Job=2
-if [ $Mohammad ] || [ $Now ]
+Home=/home/gpb147/
+Home2=gpb147
+if [ $Mohammad \> $Job ] 
 then
-        echo "OK"
-        if [ $Job ] && [ $Working ]
-        then
-                echo "OK2"
-        else
-                echo "Not OK2"
-        fi
-        exit
-else
-        echo "Not OK"
+	echo "OK"
+	pwd
+	if [ $Home = /home/gpb147/ ]
+	then
+		cd $Home
+		pwd
+		echo "Very Good"
+	else
+		echo "We need to try again"
+	fi
+	exit
 fi
 exit
+

@@ -1,9 +1,9 @@
 #!/bin/bash
 num=0
-until echo "OK"
-        [ $num -eq 18]
+until [ $num -eq 30 ]
 do
-        echo "$num now is"
-        num=$[ $num + 2 ]
+	echo "Number now=$num"
+	num=$[ $num + 1 ]
 done
 exit
+

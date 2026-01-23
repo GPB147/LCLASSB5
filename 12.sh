@@ -1,13 +1,18 @@
 #!/bin/bash
 Home=gpb147
-if test $Home
+if grep $Home /etc/passwd
 then
-        echo "HOME is good"
-elif test /home/$Home/
+	echo "This is nice"
+	ls /home/$Home/Repo/*.sh
+elif ls /home/$Home/
 then
-        echo "HOME is great"
+	echo "We have a home actually"
+	ls /home/$Home/Repo/*.sh
 else
-        echo "HOME is good just"
+	echo "WTF is happening"
+	ls /home/$Home/Repo/*.sh
 fi
 echo "We are outside the if statement"
 exit
+
+

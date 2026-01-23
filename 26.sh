@@ -1,10 +1,7 @@
 #!/bin/bash
-
-lis="Who are you"
-lis=$lis" man"
-
-for Vibration in $lis
+for Vibration in My nam"e is Moha"mmad
 do
-        echo "Hello $lis"
+	echo "Well... $Vibration"
 done
 exit
+

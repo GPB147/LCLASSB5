@@ -1,8 +1,10 @@
 #!/bin/bash
-num=0
-until [ $num -eq 23 ]
+num=21
+while echo "$num is"
+	[ $num -gt 14 ]
 do
-        echo $num
-        num=$[ $num + 1 ]
+	echo "OK $num"
+	num=$[ $num - 1 ]
 done
 exit
+

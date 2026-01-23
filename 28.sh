@@ -1,13 +1,8 @@
 #!/bin/bash
-addr="/home/gpb147/Repo/0.sh"
-for vib in $addr
+addr="0.sh"
+for Vibration in $(cat $addr)
 do
-        if [ -d "$vib" ]
-        then
-                echo "$vib is a directory"
-        elif [ -f "$vib" ]
-        then
-                echo "$vib is a file"
-        fi
+	echo "Hello $Vibration"
 done
 exit
+

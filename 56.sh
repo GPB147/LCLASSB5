@@ -1,9 +1,7 @@
 #!/bin/bash
 
-if [ $# -ne 2 ]
-then
-        echo "Not enough"
-else
-        echo "$1 and $2 enough"
-fi
+name=$(basename $0)
+
+echo "Name of script is $name"
 exit
+

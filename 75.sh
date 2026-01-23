@@ -1,4 +1,4 @@
 #!/bin/bash
 
-gawk '{print $2}' 74.txt
-exit
+echo "Hello world, such a beautiful day"
+

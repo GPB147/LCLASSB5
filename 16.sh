@@ -1,13 +1,13 @@
 #!/bin/bash
 Mohammad=25
-Job=2
-if [ $Mohammad \> $Job ]
-then
-        echo "OK"
-elif [ $Mohammad \< $Job ]
+if [ 25 \> 1 ] 
 then 
-        echo "WTF"
+	echo "OK"
+elif [ 25 \< 1 ]
+then
+	echo "WTF"
 else
-        echo "Zero"
+	echo "Zero"
 fi
 exit
+

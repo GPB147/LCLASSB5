@@ -1,14 +1,11 @@
 #!/bin/bash
-
-num=20
-
-while echo "This is OK $num"
-        [ $num -ge 0 ]
+for (( num = 0 ; num < 5 ; num++ ))
 do
-        num=$[ $num - 1 ]
-        for (( num0 = 0 ; num0 < 20 ; num0++ ))
-        do
-            echo "  Now Number 1 is $num0"
-        done
+	echo "Number0 now is $num"
+	for (( num0 = 5 ; num0 > 0 ; num0-- ))
+	do
+		echo "        Number1 now is $num0"
+	done
 done
 exit
+

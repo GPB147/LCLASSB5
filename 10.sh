@@ -1,13 +1,12 @@
 #!/bin/bash
-Home=gpb147
+Home=gpb137
 if grep $Home /etc/passwd
 then
-        echo "This is great"
-        ls /home/$Home/Repo
-elif ls /home/$Home/
-then
-        echo "Better than imagine"
-        ls /home/$Home/Repo
+	echo "This is great"
+	echo "This is wonderful"
+	ls /home/$Home/*.sh
+else
+	echo "The $Home does not exist in the system"
 fi
-echo "We are outside the if statement"
+echo "We are out the if statement"
 exit

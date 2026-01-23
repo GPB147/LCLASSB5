@@ -1,12 +1,10 @@
 #!/bin/bash
-Mohammad=25
-if [ 25 \> 3 ]
+Home=gpb147
+if [ $Home = gpb147 ]
 then
-        echo "OK"
-elif [ 25 \< 3 ]
-then
-        echo "WTF"
+	echo "Everything is OK"
 else
-        echo "Zero"
+	echo "Something is wrong"
 fi
 exit
+

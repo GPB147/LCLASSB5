@@ -1,6 +1,5 @@
 #!/bin/bash
 
-name=$(basename $0)
-
-echo "Name of script is $name"
+echo "Hello, $1, Are you $2"
 exit
+

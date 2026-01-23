@@ -1,5 +1,7 @@
 #!/bin/bash
 
-read -t 4 -p "Enter The Name: "
-echo "Welcome, $REPLY"
+echo "The inputs1=$*"
+echo "The inputs2=$@"
 exit
+
+

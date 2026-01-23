@@ -1,15 +1,16 @@
 #!/bin/bash
 
-for vib in /home/gpb147/Repo/*
+for (( num0 = 0 ; num0 > -4 ; num0-- ))
 do
-        if [ -d $vib ]
-        then
-                echo "This is a directory"
-        elif [ -f $vib ]
-        then
-                echo "This is a file"
-        else
-                echo "Something is wrong"
-        fi
-done > -1.txt
+	for (( num1 = -4 ; num1 < 0 ; num1++ ))
+	do
+		if [ $num0 -gt -4 ] && [ $num0 -lt -1 ]
+		then
+			continue 2
+		fi
+		num2=$[ $num0 * $num1 ]
+		echo "Number0=$num0&Number1=$num1&Multiple=$num2"
+	done
+done
 exit
+

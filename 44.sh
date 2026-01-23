@@ -1,15 +1,12 @@
 #!/bin/bash
 
-num=0
-
-while echo "OK $num"
-        [ $num -lt 14 ]
+for (( num = -4 ; num < 11 ; num++ ))
 do
-        if [ $num -gt 4 ] && [ $num -lt 11 ] 
-        then
-                continue
-        fi
-        echo "Number now is the $num"
-        num=$[ $num + 1 ]
+	if [ $num -gt 4 ] && [ $num -lt 7 ]
+	then
+		continue
+	fi
+	echo "Number now is the $num"
 done
 exit
+

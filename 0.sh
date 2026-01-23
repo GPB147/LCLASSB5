@@ -1,4 +1,4 @@
 #!/bin/bash
-# This is my first shell(Bash) script
+# This is my first shell(Bash) by vim
 pwd;ps
 ls

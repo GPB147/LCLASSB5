@@ -1,16 +1,10 @@
 #!/bin/bash
 
-cou=1
-for vib in $*
-do
-        echo "\$* #$cou = $vib"
-        cou=$[ $cou + 1 ]
-done
-#
-cou=1 
-for vib in $@ 
-do
-        echo "\$@ #$cou = $vib"
-        cou=$[ $cou + 1]
-done
+if [ $# -ne 2 ]
+then
+	echo "Not enough"
+else
+	echo "$1 and $2 enough"
+fi
 exit
+

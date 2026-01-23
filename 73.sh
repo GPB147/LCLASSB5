@@ -1,4 +1,5 @@
 #!/bin/bash
 
-gawk '{print "Fuck You"}
+echo "$1 $2 $# $#"
 exit
+

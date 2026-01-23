@@ -1,19 +1,14 @@
 #!/bin/bash
-Home=/home/gpb147/
-Home2=gpb147
-if [ $Home != gpb147 ]
+Mohammad=25
+Job=2
+if [ $Mohammad \> $Job ]
 then
-        echo "OK"
-        pwd
-        cd $Home
-        pwd
-elif [ $Home != $Home2 ]
+	echo "OK"
+elif [ $Mohammad \< $Jon ]
 then
-        echo "OoK"
-        pwd
-        cd $Home
-        pwd
+	echo "WTF"
 else
-        echo "Zero"
+	echo "Zero"
 fi
 exit
+

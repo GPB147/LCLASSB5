@@ -1,7 +1,11 @@
 #!/bin/bash
-addr="0.sh"
-for vib in $(cat $addr)
+
+lis="We are here for now"
+lis=$lis" Important"
+
+for Vibration in $lis
 do
-        echo "Hello $vib"
+	echo "Give me thath $lis?"
 done
 exit
+

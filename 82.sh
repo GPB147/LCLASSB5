@@ -1,4 +1,5 @@
 #!/bin/bash
 
-sed '/gpb147/s/bin/Fuck You Bech/' /etc/passwd
+gawk -F: '{print $1}' /etc/passwd
 exit
+

@@ -1,7 +1,7 @@
 #!/bin/bash
-if Mohammadisthebest
+if pwd
 then
-        echo "Hello"
+        echo "Maybe worked"
 fi
-echo "We are outside the if statement"
 exit
+

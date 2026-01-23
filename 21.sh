@@ -1,10 +1,9 @@
 #!/bin/bash
-Mohammad=25
-Job=2
-if (($Job ** 2 + 10 > $Mohammad))
+if (echo "Hello")
 then
-        echo "Ops"
+	echo "OK"
 else
-        echo "OK I can handle that"
+	echo "Not OK"
 fi
 exit
+

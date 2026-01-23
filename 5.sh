@@ -1,7 +1,5 @@
 #!/bin/bash
-if pwd
-then
-        echo "Maybe worked"
-fi
+echo "Hello, World"
+Hacker="Maskhsre"
+echo "felani is the $Hacker"
 exit
-        

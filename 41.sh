@@ -1,16 +1,12 @@
 #!/bin/bash
 
-for (( num0 = 55 ; num0 > 50 ; num0-- ))
+for vib in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 do
-        echo "Number 0 now is $unm0"
-        for (( num1 = 22 ; num1 < num0 ; num1++ ))
-        do
-                echo "  Number 1 now is $num1"
-                if [ $num1 -eq 32 ]
-                then
-                        break
-                fi
-        done
+	echo "Number now is $vib"
+	if [ $vib -eq 7 ]
+	then
+		break
+	fi
 done
 exit
 

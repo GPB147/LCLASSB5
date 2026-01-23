@@ -1,13 +1,14 @@
 #!/bin/bash
 Home=gpb147
-if [ $Home ]
+if test $Home
+then 
+	echo "HOME is good"
+elif test /home/$Home/
 then
-        echo "HOME is good"
-elif [ /home/$Home/ ]
-then
-        echo "HOME is great"
+	echo "HOME is great"
 else
-        echo "HOME is good just"
+	echo "HOME is good just"
 fi
 echo "We are outside the if statement"
 exit
+

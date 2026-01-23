@@ -1,4 +1,5 @@
 #!/bin/bash
 
-gawk -F: -f 77.gawk /etc/passwd
+sed -f 77.sed 75.sh
 exit
+

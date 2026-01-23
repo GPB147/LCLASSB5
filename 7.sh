@@ -1,10 +1,8 @@
 #!/bin/bash
-Home=gpb147
-if grep $Home /etc/passwd
-than
-        echo "This is wonderful"
-        echo "So we can say: "
-        ls /home/$Home/Repo/*.sh
+if Mohammadisthebest
+then
+	echo "Yep Yep"
 fi
-echo "We are out the if statement"
+echo "We are outside the if statement"
 exit
+

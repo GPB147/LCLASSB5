@@ -1,11 +1,4 @@
-Hello 
-Who are you
-A man like you
-I'm no a man at all
-you seem's like a man 
-I am a women like you OK?
-Let's get out of here
-To where we going?
-Everywhere
-OK go
-go
+Hello World
+Hello Dog
+Hello People
+Hello Everyone

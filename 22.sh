@@ -1,22 +1,11 @@
 #!/bin/bash
-if [ $HOME = /home/gpb147 ]
+Mohammad=25
+Job=2
+if (($Job ** 2 + 10 > $Mohammad))
 then
-        echo "OK"
-        if [ $HOME == /home/gpb147 ]
-        then
-                echo "OK"
-                if [ $HOME == "/home/gpb147" ]
-                then
-                        echo "OK"
-                else
-                        echo "Not OK"
-                fi
-                exit
-        else
-                echo "Not OK"
-        fi
-        exit
+	echo "Ops"
 else
-        echo "Not OK"
-fi
+	echo "OK I can handle that"
+fi 
 exit
+

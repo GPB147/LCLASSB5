@@ -1,17 +1,17 @@
 #!/bin/bash
 
-for vib in -1 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+for (( num0 = 7 ; num0 < 11 ; num0++ ))
 do
-        echo "Number now is $vib"
-        while [ $vib -lt 30 ]
-        do  
-                num=$[ $vib * 2 ]
-                echo "Multiple now is $num"
-                vib=$[ %vib + 1 ]
-                if [ $num -gt 44 ]
-                then
-                        break 2
-                fi
-        done
+	echo "Number 0 now is $num0"
+	for (( num1 = 111 ; num1 > num0 ; num1-- ))
+	do
+		echo "Number 1 now is $num1"
+		if [ $num1 -eq 99 ]
+		then 
+			break
+		fi
+	done
 done
 exit
+
+

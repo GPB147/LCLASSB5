@@ -1,6 +1,7 @@
 #!/bin/bash
-for ((num0 = 0, num1 = 1 ; num0 <= 10 ; num0++, num1--))
+for ((Number = 0 ; Number < 10 ; Number++))
 do
-        echo "Number0 now is $num1 and Number1 is $num1"
+	echo "Number is $Number now"
 done
 exit
+
